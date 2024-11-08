@@ -1,0 +1,28 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="samosbor"
+config/features=PackedStringArray("4.3", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+RoomManager="*res://base/room manager/RoomManager.gd"
+
+[file_customization]
+
+folder_colors={
+"res://base/": "red",
+"res://base/room/": "red",
+"res://lib/": "green",
+"res://src/": "orange"
+}

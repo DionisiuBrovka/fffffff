@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgk7jpo4y2cv7"]
+
+[ext_resource type="Script" path="res://base/room/room.gd" id="1_y0nsm"]
+
+[node name="room" type="Node3D" node_paths=PackedStringArray("doors_points")]
+script = ExtResource("1_y0nsm")
+doors_points = [null, null, null]
