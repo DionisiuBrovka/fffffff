@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://qi03lohhwot2"]
+
+[ext_resource type="Script" path="res://test.gd" id="1_c8v2f"]
+[ext_resource type="PackedScene" uid="uid://rsbh7tld80a4" path="res://utils/camera_3d_freelook.tscn" id="2_pcqxl"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xd5re"]
+
+[sub_resource type="Sky" id="Sky_njude"]
+sky_material = SubResource("ProceduralSkyMaterial_xd5re")
+
+[sub_resource type="Environment" id="Environment_by2l3"]
+background_mode = 2
+sky = SubResource("Sky_njude")
+ambient_light_source = 3
+reflected_light_source = 2
+
+[node name="Test" type="Node3D"]
+script = ExtResource("1_c8v2f")
+
+[node name="testnode" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_by2l3")
+
+[node name="Camera3D" parent="." instance=ExtResource("2_pcqxl")]
